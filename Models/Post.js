@@ -6,6 +6,7 @@ module.exports = context.define('post', {
         primaryKey: true,
         autoIncrement: true,
     },
+    image:DataTypes.STRING,
     title:DataTypes.STRING,
     description:DataTypes.STRING,
     source:DataTypes.STRING,
