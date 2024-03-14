@@ -3,7 +3,7 @@ var application = express();
 
 var bodyparser = require('body-parser');
 
-
+var cors = require('cors');
 
 entity = () => {
     var post = require('./Models/Post');
@@ -14,6 +14,7 @@ entity = () => {
 }
 
 middleware = () => {
+    application.use(cors({ allowedHeaders: ['Content-Type'] }));
     application.use(bodyparser.json());
     application.use(bodyparser.urlencoded({ extended: true }));
     //router start
